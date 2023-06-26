@@ -614,9 +614,10 @@ a{
             align-items: center;
         }
         &_items{
-            flex:1;
+            width: 70vw;
             &-img{
                 flex:1;
+                width: 50%;
             }
             &-text{
                 flex:2;
@@ -624,10 +625,11 @@ a{
             }
             
             &-title{
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
         }
     }
+
     .content{
         .main_content{
             display: inline;
@@ -755,6 +757,37 @@ a{
             margin-top: 2rem; 
         }
     }
+    .catalog{
+        &_items{
+            width: 75%;
+            &-img{
+                margin: 0 auto;
+                width: 50%;
+            }
+            &-text{
+                padding-top: 2rem;
+                display: flex;
+                align-items:center;
+                margin: 0 auto;
+                width: auto;
+            }
+            flex-direction: column;
+            padding:2rem;
+            margin-bottom: 2rem;
+            &:first-child{
+                @include catalog_shadow_responsive-320px(#fe98c4);
+               }
+               &:nth-child(2){
+                @include catalog_shadow_responsive-320px(#ff716c);
+               }
+               &:nth-last-child(2){
+                @include catalog_shadow_responsive-320px(#8599ff);
+               }
+               &:last-child{
+                @include catalog_shadow_responsive-320px(#ffc77b);
+               }
+        }
+    }
     .content{
         .btn{
             width: auto;
@@ -804,24 +837,6 @@ a{
     .tittle{
         .btn_primary{
             margin-top: 1rem;
-        }
-    }
-    .catalog{
-        &_items{
-            padding:2rem;
-            margin-bottom: 2rem;
-            &:first-child{
-                @include catalog_shadow_responsive-320px(#fe98c4);
-               }
-               &:nth-child(2){
-                @include catalog_shadow_responsive-320px(#ff716c);
-               }
-               &:nth-last-child(2){
-                @include catalog_shadow_responsive-320px(#8599ff);
-               }
-               &:last-child{
-                @include catalog_shadow_responsive-320px(#ffc77b);
-               }
         }
     }
     .content{
